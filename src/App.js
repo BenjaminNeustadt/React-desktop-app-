@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 
 function App() {
+  const [todos, setTodos] = useState([]);
+  const [value, setValue] = useState("");
+
+  const addTodo = e => {
+    e.preventDefault();
+    if(value.trim() === '') return;
+    setTodos([
+      ...todos,
+      {
+        text: value,
+        id: uuidv4(),
+      },
+    ]);
+    setValue("");
+  };
+
+  const removeTodo = (todoId) => {
+    setTodos(todos.filter(todo => todo.id !== todoId));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <form onSubmit={addTodo}>
+          <input
+            autoFocus
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            type="text"
+            placeholder="Add todo..."
+          />
+          <button type="submit">Add</button>
+        </form>
+        {todos.map((todo) => (
+          <div key={todo.id} className="todo">
+            <p>{todo.text}</p>
+            <span onClick={() => removeTodo(todo.id)}>X</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
