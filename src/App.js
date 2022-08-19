@@ -24,26 +24,29 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="container">
-        <form onSubmit={addTodo}>
-          <input
-            autoFocus
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            type="text"
-            placeholder="Add todo..."
-          />
-          <button type="submit">Add</button>
-        </form>
-        {todos.map((todo) => (
-          <div key={todo.id} className="todo">
-            <p>{todo.text}</p>
-            <span onClick={() => removeTodo(todo.id)}>X</span>
-          </div>
-        ))}
-      </div>
-    </div>
+      <body className="App">
+        <div class="message-box">
+          <h2 class="title">Task Tracker:</h2>
+        </div>
+        <div className="container">
+          <form onSubmit={addTodo}>
+            <input
+              autoFocus
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              type="text"
+              placeholder="Add todo..."
+            />
+            <button type="submit">Add</button>
+          </form>
+          {todos.map((todo) => (
+            <div key={todo.id} className="todo">
+              <p>{todo.text}</p>
+              <span onClick={() => removeTodo(todo.id)}>X</span>
+            </div>
+          ))}
+        </div>
+      </body>
   );
 }
 

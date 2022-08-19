@@ -5,6 +5,7 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+
 .App{
   width: 100%;
   min-height: 100vh;
@@ -14,7 +15,24 @@
   align-items:flex-start;
 }
 
+.message-box {
+  position: absolute;
+  top:60px;
+  border-style:solid;
+  width: 340px;
+  text-align: center;
+  border-width: 0.5px;
+  box-shadow:
+    10px -10px 0 -0.7px #efefef,
+    10px -10px,
+    20px -20px 0 -0.7px #e5e5e5,
+    20px -20px;
+    transition: box-shadow 1s, top 1s, left 1s;
+}
+
 .container {
+  position: absolute;
+  top: 120px;
   width: 100%;
   max-width: 340px;
   font-weight: bold;

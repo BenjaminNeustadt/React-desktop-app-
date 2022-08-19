@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+# NOTES during build:
+
+- used this during the build:
+
+  https://www.npmjs.com/package/uuid
+
+
+- used this:
+  https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
+
+To solve initial error when doing `npm run build`
+`npm run start` works correctly from the get go. However, I have started using yarn instead of npm as it seems to verify the version also, instead of just installing deprecated versions.
+
+When the app is finished, we do `npm run build` it constructs a package that can be used as a desktop app.
+
