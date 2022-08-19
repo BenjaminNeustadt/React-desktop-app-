@@ -37,6 +37,9 @@
     ]
   },
   "main": "index.html",
+  "window": {
+    "frame": true
+  },
   "nwBuilder": {
     "//": "https://github.com/nwjs-community/nw-builder",
     "platforms": [
