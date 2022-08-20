@@ -32,6 +32,6 @@ https://www.youtube.com/watch?v=EHvdi9qZB38
 
 # Next exercise: 
 
-I will build a slightly more complicated version that stores the inputs either into a database, or with a "fake" API using json-server, such as [this](https://github.com/BenjaminNeustadt/React-JS-crash-course) one I have done, though it should run as a desktop app: 
+I will build a slightly more complicated version that stores the inputs either into a database, or with a "fake" API using json-server, such as [this](https://github.com/BenjaminNeustadt/React-JS-crash-course) one I have done. However, it should run as a desktop app: 
 
-<img src= "assets/react-task-tracker.gif">
+<img src= "assets/task-tracker-react-demo.gif">
